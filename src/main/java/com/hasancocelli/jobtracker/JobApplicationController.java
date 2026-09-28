@@ -1,5 +1,6 @@
 package com.hasancocelli.jobtracker;
 
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,14 +35,14 @@ public class JobApplicationController {
     }
 
     @PostMapping
-    public ResponseEntity<JobApplication> create(@RequestBody JobApplication application) {
+    public ResponseEntity<JobApplication> create(@Valid @RequestBody JobApplication application) {
         JobApplication saved = service.create(application);
         URI location = URI.create("/api/applications/" + saved.getId());
         return ResponseEntity.created(location).body(saved);
     }
 
     @PutMapping("/{id}")
-    public JobApplication update(@PathVariable Long id, @RequestBody JobApplication changes) {
+    public JobApplication update(@PathVariable Long id, @Valid @RequestBody JobApplication changes) {
         return service.update(id, changes);
     }
 
