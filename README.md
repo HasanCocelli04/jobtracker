@@ -1,4 +1,5 @@
 # Job Tracker API
+![CI](https://github.com/HasanCocelli04/jobtracker/actions/workflows/ci.yml/badge.svg)
 
 A REST API for tracking job applications, built with Spring Boot and Java 21. Deployed on Render with a PostgreSQL database hosted on Neon.
 
