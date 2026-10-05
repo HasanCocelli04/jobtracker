@@ -3,6 +3,7 @@
 A REST API for tracking job applications, built with Spring Boot and Java 21. Deployed on Render with a PostgreSQL database hosted on Neon.
 
 **Live:** https://jobtracker-rpx9.onrender.com/api/applications
+**Interactive API docs:** https://jobtracker-rpx9.onrender.com/swagger-ui.html
 
 Note: it runs on Render's free tier, so the first request after a period of inactivity can take up to a minute while the service wakes up.
 
