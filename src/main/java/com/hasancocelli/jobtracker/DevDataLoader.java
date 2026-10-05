@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 
 @Component
-@Profile("!test")
+@Profile("!test & !prod")
 public class DevDataLoader implements CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(DevDataLoader.class);
